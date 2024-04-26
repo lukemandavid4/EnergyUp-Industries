@@ -1,0 +1,117 @@
+.navbar{
+    margin: 0 19rem 0 19rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    height: 3.5rem;
+    border-radius: 100vw;
+    padding: 0 1.5rem;
+    z-index: 999;
+    position: sticky;
+    top: 4rem;
+    transition: 0.3s background;
+}
+.navbar.scrolled{
+    background: #000;
+}
+.navbar.scrolled .navbar__links{
+    background: #2b2b2b;
+}
+.navbar__logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.navbar__logo img{
+    width: 1.5rem;
+}
+.navbar__logo a{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+.navbar__links{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 2rem;
+    border-radius: 100vw;
+}
+.navbar__links a{
+    color: #fff;
+    text-decoration: none;
+}
+.navbar__links a:hover{
+    text-decoration: underline;
+}
+.navbar__contact a{
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #fff;
+    border-radius: 100vw;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s background;
+}
+.navbar__contact a:hover{
+    background: #65ac00;
+    border: 1px solid #65ac00;
+}
+.navbar__hamburger{
+    padding: 0.5rem;
+    background: #65ac00;
+    border-radius: 0.5rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: none;
+}
+.navbar__hamburger .icon{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+@media screen and (max-width: 1700px) {
+    .navbar{
+        margin: 1.75rem 10rem 0 10rem;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .navbar{
+        margin: 1.75rem 6rem 0 6rem;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .navbar{
+        margin: 1.75rem 1.75rem 0 1.75rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .navbar__contact{
+        display: none;
+    }
+    .navbar__links{
+        position: absolute;
+        flex-direction: column;
+        right: -2rem;
+        top: -4rem;
+        width: 70%;
+        height: 50vh;
+        border-radius: 0;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s opacity;
+    }
+    .navbar__links.open{
+        opacity: 1;
+        pointer-events: all;
+    }
+    .navbar__hamburger{
+        display: flex;
+    }
+}
