@@ -1,1 +1,1 @@
-<img src="https://energyupindustries.netlify.app/">
+https://energyupindustries.netlify.app/
